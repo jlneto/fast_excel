@@ -542,7 +542,7 @@ module FastExcel
     def close
       if auto_width?
         @column_widths.each do |num, width|
-          set_column_width(num, width + 0.2)
+          set_column_width(num, (width || 0) + 0.2)
         end
       end
     end
